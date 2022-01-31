@@ -7,6 +7,7 @@ module.exports = {
       colors: {
         blue: {
           deep: "#12477C",
+          light: "#3D78DB",
           link_bg: "#EDEFFA",
           link_text: "#4E64D0",
         },
@@ -14,7 +15,15 @@ module.exports = {
           link_text: "#8995A0",
           light: "#F4F8FC",
           input: "#E8EEF4",
-        }
+        },
+        green: {
+          deep: '#19B0AC',
+        },
+        pink: {
+          light: '#DB4F95',
+        },
+        primary_text: "#0A1C27",
+        secondary_text: "#86939E",
       },
       fontFamily: {
         inter: ['Inter', 'sans-serif']
