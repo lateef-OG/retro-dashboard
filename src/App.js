@@ -1,11 +1,9 @@
 import "./App.css";
-import Sidebar from "./components/sidebar/Sidebar";
+import Dashboard from "./pages/dashboard/Dashboard";
 
 function App() {
   return (
-    <div className="bg-red-700 max-h-screen flex">
-      <Sidebar />
-    </div>
+    <Dashboard />
   );
 }
 

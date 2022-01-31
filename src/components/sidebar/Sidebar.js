@@ -10,70 +10,67 @@ import {
   faBriefcase,
   faCog,
 } from "@fortawesome/free-solid-svg-icons";
-import SideBarItem from "../SideBarItem";
+import SideBarItem from "./SideBarItem";
 
 const sidebarLinks = [
   {
-    active: true,
-    linkText: "Dashbaord",
+    linkText: "Dashboard",
     icon: faChartLine,
   },
   {
-    active: false,
     linkText: "Products",
     icon: faUniversity,
   },
   {
-    active: false,
     linkText: "Blog",
     icon: faShoppingCart,
   },
   {
-    active: false,
     linkText: "Transactions",
     icon: faCreditCard,
   },
   {
-    active: false,
     linkText: "Users",
     icon: faUsers,
   },
   {
-    active: false,
     linkText: "Analysis",
     icon: faSignal,
   },
   {
-    active: false,
     linkText: "Reports",
     icon: faFlag,
   },
   {
-    active: false,
     linkText: "Investment",
     icon: faBriefcase,
   },
   {
-    active: false,
     linkText: "Settings",
     icon: faCog,
   },
 ];
 
-const Sidebar = () => {
+const Sidebar = ({ page }) => {
   return (
     <>
-      <aside className="fixed w-64 max-h-screen overflow-hidden bg-white border-r px-4 py-2 inset-y-0 flex flex-col flex-shrink-0">
-        <h1 className="text-5xl font-black text-blue-deep mb-16 font-inter">
-          RETRO
-        </h1>
-        <nav className="flex-1 overflow-hidden hover:overflow-y-auto">
-          <ul className="p-2 overflow-hidden">
-            {sidebarLinks.map((item, index) => (
-              <SideBarItem item={item} key={`${item.linkText}_${index}`} />
-            ))}
-          </ul>
-        </nav>
+      <aside className="w-64 bg-white">
+        <div className="fixed w-64 max-h-screen px-4 py-2">
+          <h1 className="text-5xl font-black text-blue-deep mb-16 font-inter">
+            RETRO
+          </h1>
+          <nav className="flex-1 overflow-hidden hover:overflow-y-auto">
+            <ul className="p-2 overflow-hidden">
+              {sidebarLinks.map((item, index) => (
+                <SideBarItem
+                  item={item}
+                  active={page === item.linkText}
+                  key={`${item.linkText}_${index}`}
+                />
+              ))}
+            </ul>
+          </nav>
+        </div>
       </aside>
     </>
   );

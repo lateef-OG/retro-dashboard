@@ -12,6 +12,8 @@ module.exports = {
         },
         gray: {
           link_text: "#8995A0",
+          light: "#F4F8FC",
+          input: "#E8EEF4",
         }
       },
       fontFamily: {

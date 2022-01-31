@@ -1,8 +1,8 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const SideBarItem = ({item}) => {
-  const { active, linkText, icon } = item;
+const SideBarItem = ({item, active}) => {
+  const { linkText, icon } = item;
   return (
     <>
       <li>
